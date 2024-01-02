@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 
-public abstract class SkipTurnsAction extends Action {
+public class SkipTurnsAction extends Action {
     
     int turns;
     
@@ -12,8 +12,8 @@ public abstract class SkipTurnsAction extends Action {
         this.turns = turns;
     }
  
-    
-    void skipTurns(Refugee refugee)
+    @Override
+    public void act(Refugee refugee)
     {
         refugee.addSkipTurns(turns);
     }

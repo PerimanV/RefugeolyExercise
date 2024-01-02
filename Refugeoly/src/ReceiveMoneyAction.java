@@ -4,7 +4,7 @@
  */
 
 
-public abstract class ReceiveMoneyAction extends Action {
+public class ReceiveMoneyAction extends Action {
     
     private int fee;
     private boolean mafia;
@@ -16,7 +16,7 @@ public abstract class ReceiveMoneyAction extends Action {
         
     }
     
-    void receiveMoney(Refugee refugee)
+    public void act(Refugee refugee)
     {
         refugee.receiveMoney(fee);
     }

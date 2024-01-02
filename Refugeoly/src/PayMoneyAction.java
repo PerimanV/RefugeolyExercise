@@ -3,25 +3,25 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 
-/**
- *
- * @author perim
- */
-public abstract class PayMoneyAction extends Action {
+
+public class PayMoneyAction extends Action {
     
     private int fee;
     private boolean mafia;
+    private ReceiverEntity receiver;
     
-    public PayMoneyAction(int fee,boolean mafia)
+    public PayMoneyAction(int fee,boolean mafia,ReceiverEntity receiver)
     {
         this.fee = fee;
         this.mafia = mafia;
+        this.receiver = receiver;
         
     }
     
-    public void payMoney(RecieverEntity reciever,Refugee refugee)
+    @Override
+    public void act(Refugee refugee)
     {
-        refugee.giveMoney(mafia, fee, reciever);
+        refugee.giveMoney(mafia, fee, receiver);
     }
     
 }

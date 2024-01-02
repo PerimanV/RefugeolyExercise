@@ -5,17 +5,16 @@
 
 import java.util.Random;
 
-public abstract class RollDiceAction extends Action {
+public class RollDiceAction extends Action {
     
-    
-    
-    public int rollDice()
+    @Override
+    public void act(Refugee refugee)
     {
         Random rand = new Random();
     
         int  roll = rand.nextInt(6);
         
-        return roll;
+        refugee.setDice(roll);
         
     }
     

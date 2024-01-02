@@ -5,24 +5,37 @@
 
 import java.util.Scanner;
 
-public abstract class ChoiceAction extends Action{
+public class ChoiceAction extends Action{
+    Refugee refugee;
+    ReceiverEntity receiver;
+    
+    
+    public ChoiceAction (Refugee refugee,ReceiverEntity receiver)
+    {
+        this.refugee = refugee;
+        this.receiver = receiver;
+    }
     
     Scanner input = new Scanner(System.in);
     
-    System.out.println("Option 1: Pay $1500 to Mafia Bank and roll dice. Option 1: Don't pay and stay 2 turns");
+   @Override
+   public void act(Refugee refugee) {
+        System.out.println("Option 1: Pay $1500 to Mafia Bank and roll dice. Option 2: Don't pay and stay 2 turns");
+   
+        int ans = input.nextInt();
+
+        if (ans == 1)
+        {
+            refugee.giveMoney(true, 1500,receiver );
+            
+        }
+        else
+        {
+            refugee.addSkipTurns(2);
+        }
+   }
     
-    int ans = input.nextInt();
-    
-    if (ans == 1)
-    {
-        // if ans == 1 pay mafia 1500 and rolldiceaction
-    }
-    else
-    {
-        // if ans == 0 Skipturnsaction
-    }
-    
-    void payMoney(Refugee refugee,ReceiverEntity receiver)
+    public void payMoney(Refugee refugee,ReceiverEntity receiver)
     {
         refugee.giveMoney(true, 1500, receiver);
     }

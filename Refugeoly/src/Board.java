@@ -3,21 +3,20 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 
+import java.util.ArrayList;
 
-public class GoToAction extends Action {
-    private Square square;
+public class Board {
     
-    public GoToAction(Square square)
+    private ArrayList<Square> squares = new ArrayList<Square>();
+    
+    public void addSquare(Square square)
     {
-        this.square = square;
-        
+        squares.add(square);
     }
     
-    
-    @Override
-    public void act(Refugee refugee)
+    public void getSquare(int num)
     {
-        refugee.setSquare(square);
+        squares.get(num);
     }
     
     

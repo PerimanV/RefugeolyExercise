@@ -4,17 +4,13 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/perim/Documents/Askiseis%20Sxolis/Refugeoly/src/Refugee.java</file>
-            <file>file:/C:/Users/perim/Documents/Askiseis%20Sxolis/Refugeoly/src/ChoiceAction.java</file>
-            <file>file:/C:/Users/perim/Documents/Askiseis%20Sxolis/Refugeoly/src/Action.java</file>
+            <file>file:/C:/Users/perim/Documents/Askiseis%20Sxolis/Refugeoly/src/Board.java</file>
+            <file>file:/C:/Users/perim/Documents/Askiseis%20Sxolis/Refugeoly/src/Game.java</file>
             <file>file:/C:/Users/perim/Documents/Askiseis%20Sxolis/Refugeoly/src/refugeoly/Refugeoly.java</file>
-            <file>file:/C:/Users/perim/Documents/Askiseis%20Sxolis/Refugeoly/src/RollDiceAction.java</file>
             <file>file:/C:/Users/perim/Documents/Askiseis%20Sxolis/Refugeoly/src/PayMoneyAction.java</file>
             <file>file:/C:/Users/perim/Documents/Askiseis%20Sxolis/Refugeoly/src/ReceiverEntity.java</file>
-            <file>file:/C:/Users/perim/Documents/Askiseis%20Sxolis/Refugeoly/src/ReceiveMoneyAction.java</file>
             <file>file:/C:/Users/perim/Documents/Askiseis%20Sxolis/Refugeoly/src/GoToAction.java</file>
-            <file>file:/C:/Users/perim/Documents/Askiseis%20Sxolis/Refugeoly/src/SkipTurnsAction.java</file>
             <file>file:/C:/Users/perim/Documents/Askiseis%20Sxolis/Refugeoly/src/Square.java</file>
-            <file>file:/C:/Users/perim/Documents/Askiseis%20Sxolis/Refugeoly/src/GiverEntity.java</file>
         </group>
     </open-files>
 </project-private>

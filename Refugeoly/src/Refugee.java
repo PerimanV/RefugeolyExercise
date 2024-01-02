@@ -6,17 +6,18 @@
 
 public class Refugee {
     private String name;
-    private int money,expenses,SkipTurns = 0;
-    private Table board;
+    private int money,expenses,SkipTurns = 0,dice;
+    private Board board;
     private Square square;
     
     
-    public Refugee(String name,int money,Table board,Square square,int expenses)
+    public Refugee(String name,int money,Board board,Square square,int expenses,int dice)
             {
                 this.name = name;
                 this.money = money;
                 this.board = board;
                 this.square = square;
+                this.dice = dice;
             }
     
     public void setSquare(Square square)
@@ -29,7 +30,7 @@ public class Refugee {
         this.money = this.money + ToReceive;
     }
     
-    public void giveMoney(boolean mafia,int money,RecieverEntity reciever)
+    public void giveMoney(boolean mafia,int money,ReceiverEntity reciever)
     {
         if(mafia)
         {
@@ -48,5 +49,11 @@ public class Refugee {
     void addSkipTurns(int turns)
     {
         SkipTurns = turns + SkipTurns;
+    }
+    
+    void setDice(int DiceNum)
+    {
+        dice = DiceNum;
+        
     }
 }

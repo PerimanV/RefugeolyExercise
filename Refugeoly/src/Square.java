@@ -9,20 +9,33 @@ public class Square {
     
     private int number;
     private String text,description;
-    private Table board;
+    private Board board;
+    private ArrayList<Action> actions = new ArrayList<Action>();
+    private int ActionSum = 0;
     
-    public Square (int number,String text,String description,Table board)
+    public Square (int number,String text,String description,Board board)
     {
         this.number = number;
         this.text = text;
         this.description = description;
         this.board = board;
         
-        
+    }
+  
+    public void addAction(Action action)
+    {
+        actions.add(action);
+        ActionSum++;
     }
     
-    ArrayList<Action> actions = new ArrayList<Action>();
-    
+     public void act(Refugee refugee) 
+     {
+        for (int i = 0; i < ActionSum; i++) 
+        {
+            Action action = actions.get(i);
+            action.act(refugee);
+        }
+    }
     
     
 }
