@@ -18,6 +18,7 @@ public class Game {
     {
         Board board1 = new Board();
         ReceiverEntity mafia = new ReceiverEntity("mafia",10000);
+        GiverEntity NGOBank = new GiverEntity("NGOBank",10000);
 
 //    Square square1 = new Square(1,"Food for the journey. Pay 100$.","This is key once leaving a country in conflict. The journey is always difficult to predict. Outsourcing food is fundamental once a refugee starts a journey.",board1);
 //    Square square2 = new Square(2,"Car. You get a free lift. Roll dice.","NGO volunteers or simply samaritans often help refugees by taken them to countries borders for free in their personal cars.",board1); 
@@ -34,7 +35,7 @@ public class Game {
 
 
         // Provide the path to your file
-        String filePath = "./refugeoly-squares.";
+        String filePath = "./refugeoly-squares.txt";
 
         // Create an ArrayList to store Square objects
         ArrayList<Square> squares = new ArrayList<>();
@@ -69,9 +70,21 @@ public class Game {
             System.out.println("End of file");
         }
         
-        // check if this works ^^^^^
+       
+        PayMoneyAction act1 = new PayMoneyAction(100,false,mafia);
         
-        PayMoneyAction pma1 = new PayMoneyAction(100,false,mafia);
+        Square sq1 = squares.get(1);
+        sq1.addAction(act1);
+        
+        System.out.println("How many players will be playing?");
+        Scanner ans = new Scanner(System.in);
+        
+        if(ans == 1)
+        {
+            
+        }
+        
+        
         // add more actions 
         
         //add more squares

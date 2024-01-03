@@ -6,18 +6,18 @@
 
 public class Refugee {
     private String name;
-    private int money,expenses,SkipTurns = 0,dice;
+    private int money,expenses,SkipTurns = 0,dice = 0;
     private Board board;
     private Square square;
+    private int lives = 1;
     
     
-    public Refugee(String name,int money,Board board,Square square,int expenses,int dice)
+    public Refugee(String name,int money,Board board,Square square,int expenses)
             {
                 this.name = name;
                 this.money = money;
                 this.board = board;
                 this.square = square;
-                this.dice = dice;
             }
     
     public void setSquare(Square square)
@@ -55,5 +55,17 @@ public class Refugee {
     {
         dice = DiceNum;
         
+    }
+    
+    void addLives(int lives)
+    {
+        this.lives = this.lives + lives;
+    }
+    
+    void removeLives(int lives)
+    {
+        this.lives = this.lives - lives;
+        
+        //check if player is alive
     }
 }
